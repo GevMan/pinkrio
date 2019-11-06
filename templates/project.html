@@ -1,0 +1,73 @@
+{% extends 'base.html'%}
+{% block primary %}                
+                <script>
+				    jQuery(document).ready(function($){
+				    	$('.sidebar').remove();
+				    	
+				    	if( !$('#primary').hasClass('sidebar-no') ) {
+				    		$('#primary').removeClass().addClass('sidebar-no');
+				    	}
+				    	
+				    });
+				</script>
+				<!-- START PRIMARY -->
+				<div id="primary" class="sidebar-no">
+				    <div class="inner group">
+						<!-- START CONTENT -->
+				        <div id="content-page" class="content group">
+				            <div class="clear"></div>
+				            <div class="posts">
+				                <div class="group portfolio-post internal-post">
+				                    <div id="portfolio" class="portfolio-full-description">
+				                        
+				                        <div class="fulldescription_title gallery-filters">
+												
+				                            <h1>{{projects.title}}</h1>
+				                        </div>
+				                        
+				                        <div class="portfolios hentry work group">
+				                            <div class="work-thumbnail">
+				                                <a class="thumb"><img src="/static/images/projects/{{projects.img}}" alt="0081" title="0081" /></a>
+				                            </div>
+				                            <div class="work-description">
+				                                <p>{{projects.text}}</p>
+				                                <div class="clear"></div>
+				                                <div class="work-skillsdate">
+				                                    <p class="skills"><span class="label">Skills:</span> {{projects.skills}}</p>
+				                                    <p class="workdate"><span class="label">Customer:</span> {{projects.customer}}</p>
+				                                    <p class="workdate"><span class="label">Year:</span> {{projects.year}}</p>
+				                                </div>
+				                            </div>
+				                            <div class="clear"></div>
+				                        </div>
+				                        
+				                        <div class="clear"></div>
+				                        
+				                        <h3>Other Projects</h3>
+				                        <div class="portfolio-full-description-related-projects">
+				                        {% for project in projectById %}
+										{% if projects.id != project.id %}
+										<div class="related_project">
+
+				                                <a class="related_proj related_img" href="{{url_for('project',id=project.id)}}" title={{project.title}}><img src="/static/images/projects/{{project.img}}"  /></a>
+												
+												<h4><a href="{{url_for('project',id=project.id)}}">{{project.title}}</a></h4>
+													
+											</div>
+											{% endif %}
+											{% endfor %}
+				                            
+				                            
+				                            
+										</div>
+				                    </div>
+				                    <div class="clear"></div>
+				                </div>
+				            </div>
+				        </div>
+				        <!-- END CONTENT -->
+				    </div>
+				</div>
+				<!-- END PRIMARY -->
+{% endblock %}				
+			

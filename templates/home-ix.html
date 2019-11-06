@@ -1,0 +1,211 @@
+{% extends 'base.html'%}    
+
+{% block slider %}
+                <!-- START SLIDER -->
+				<div id="slider-cycle" class="slider cycle no-responsive slider_cycle group" style="height:395px;">
+				    <ul class="slider">
+				        <li>
+				            <div class="slide-holder" style="background: #9fcdd6 url('images/slider-cycle/cycle1.jpg') no-repeat center center" style="height:395px;">
+				                <div class="slide-content-holder inner" style="height:395px;">
+				                    <div class="slide-content-holder-content" style="position: absolute; top:30px;right:8%;left:54%;">
+				                        <div class="slide-title">
+				                            <h2 style="color:#030303">UNLIMITED SLIDER <br /> WITH <span>PINK RIO</span></h2>
+				                        </div>
+				                        <div class="slide-content" style="color:#030303">
+				                            <p>Nam id quam a odio euismod pellentesque. Etiam congue rutrum risus non vestibulum. Quisque a diam at ligula blandit consequat.</p>
+				                            <p>Mauris ac mi velit, a tempor neque congue rutrum risus.</p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </li>
+				        <li>
+				            <div class="slide-holder" style="background:  url('static/images/slider-cycle/cycle2.jpg') no-repeat center center" style="height:395px;">
+				                <div class="slide-content-holder inner" style="height:395px;">
+				                </div>
+				            </div>
+				        </li>
+				        <li>
+				            <div class="slide-holder" style="background: #030303 url('static/images/slider-cycle/cycle3.jpg') no-repeat center center" style="height:395px;">
+				                <div class="slide-content-holder inner" style="height:395px;">
+				                    <div class="slide-content-holder-content" style="position: absolute; top:30px;right:57%;left:2.5%;">
+				                        <div class="slide-title">
+				                            <h2 style="color:#fff">PINKRIO, MULTIPURPOSE AND <span>SEXY</span></h2>
+				                        </div>
+				                        <div class="slide-content" style="color:#fff">
+				                            <p>Nam id quam a odio euismod pellentesque. Etiam congue rutrum risus non vestibulum. Quisque a diam at ligula blandit consequat.</p>
+				                            <p>Mauris ac mi velit, a tempor neque congue rutrum risus.</p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </li>
+				    </ul>
+				</div>
+				<script type="text/javascript">
+				    jQuery(document).ready(function($){
+				        
+				        var     yit_slider_cycle_fx = 'easing',
+				                yit_slider_cycle_speed = 800,
+				                yit_slider_cycle_timeout = 3000,
+				                yit_slider_cycle_directionNav = true,
+				                yit_slider_cycle_directionNavHide = true, 
+				                yit_slider_cycle_autoplay = true;
+				                
+				        var yit_widget_area_position = function(){
+				            $('#yit-widget-area').css({ top: 33 - $('#yit-widget-area').height() });
+				        };
+				        $(window).resize(yit_widget_area_position);
+				        yit_widget_area_position();
+				        
+				        if( $.browser.msie && parseInt($.browser.version.substr(0,1),10) <= '8' ) {
+				            $('#slider-cycle ul.slider').anythingSlider({
+				                 expand              : true,
+				                 startStopped        : false,
+				                 buildArrows         : yit_slider_cycle_directionNav,
+				                 buildNavigation     : false,
+				                 buildStartStop      : false,
+				                 delay               : yit_slider_cycle_timeout,
+				                 animationTime       : yit_slider_cycle_speed,
+				                 easing              : yit_slider_cycle_fx,
+				                 autoPlay            : yit_slider_cycle_autoplay ? true : false,
+				                 pauseOnHover        : true, 
+				                 toggleArrows        : false,
+				                 resizeContents      : true
+				            });
+				        } else {
+				            $('#slider-cycle ul.slider').anythingSlider({
+				                 expand              : true,
+				                 startStopped        : false,
+				                 buildArrows         : yit_slider_cycle_directionNav,
+				                 buildNavigation     : false,
+				                 buildStartStop      : false,
+				                 delay               : yit_slider_cycle_timeout,
+				                 animationTime       : yit_slider_cycle_speed,
+				                 easing              : yit_slider_cycle_fx,
+				                 autoPlay            : yit_slider_cycle_autoplay ? true : false,
+				                 pauseOnHover        : true, 
+				                 toggleArrows        : yit_slider_cycle_directionNavHide ? true : false,
+				                 onSlideComplete     : function(slider){},
+				                 resizeContents      : true,
+				                 onSlideBegin        : function(slider) {
+				                 },
+				                 onSlideComplete     : function(slider) {
+				                 }
+				            });
+				            
+				        }
+				    });
+				</script>
+				<div class="mobile-slider">
+				    <div class="slider fixed-image inner"><img src="static/images/slider-cycle/cycle-fixed.jpg" alt="" /></div>
+				</div>
+
+{% endblock %}
+{% block primary %}
+				<!-- START PRIMARY -->
+				<div id="primary" class="sidebar-left">
+				    <div class="inner group">
+				        <!-- START CONTENT -->
+				        <div id="content-home" class="content group">
+				            <div class="hentry group">
+				                <h3>Welcome to <span>PINK RIO</span>. Anoter clean, STRONG WordPress theme.</h3>
+				                <p>As a multidisciplinary practice that has evolved as a result of scholarly research, Organizational Change <strong>Management should begin</strong> with a systematic diagnosis of the current situation in order to determine both the need for change.</p>
+				                <p>Change Management processes may include creative marketing to enable communication between change audiences, but also deep social understanding about leadership’s styles and group dynamics. As a visible track on transformation projects, <a href="#">Organizational Change</a> Management aligns groups’ expectations, communicates, integrates teams and manages people training.</p>
+				            </div>
+				            <!-- START COMMENTS -->
+				            <div id="comments">
+				            </div>
+				            <!-- END COMMENTS -->
+				        </div>
+				        <!-- END CONTENT -->
+				        <!-- START SIDEBAR -->
+				        <div class="sidebar group">
+				            <div class="widget-first widget testimonial-widget">
+				                <h3>Testimonials</h3>
+				                <div class="testimonial-text">
+				                    <ul>
+				                        <li>
+				                            <blockquote>
+				                                <p>I purchased this theme and I really like it. The theme authors have been very helpful in the support area of their website. Would definitely recommend to anyone needing a corporate wordpress theme. </p>
+				                                <a href="testimonial.html" class="more-link">[...]</a>
+				                                <div class="name-testimonial"><a class="name-testimonial" href="testimonial.html">Erica Evans </a></div>
+				                            </blockquote>
+				                        </li>
+				                        <li>
+				                            <blockquote>
+				                                <p>Bookmark this theme as one of your “Must Haves for 2012” This theme is without a doubt one of our Top 5 Purchases. Once you get used to how the content is organised in Admin, </p>
+				                                <a href="testimonial.html" class="more-link">[...]</a>
+				                                <div class="name-testimonial"><a class="name-testimonial" href="testimonial.html">Ricardo Mori </a></div>
+				                            </blockquote>
+				                        </li>
+				                        <li>
+				                            <blockquote>
+				                                <p>I am absolutely thrilled with this theme! I have never built a website before but your instructions and design make it both fun and easy to do. …Thanks a lot for your help! your support </p>
+				                                <a href="testimonial.html" class="more-link">[...]</a>
+				                                <div class="name-testimonial"><a class="name-testimonial" href="testimonial.html">Elisa Meis </a></div>
+				                            </blockquote>
+				                        </li>
+				                        <li>
+				                            <blockquote>
+				                                <p>I already given a <strong>5-star rating</strong>, but I also wanted to provide my two cents in case anyone is unsure about purchasing this theme. Not only is the theme itself very versatile and easy to </p>
+				                                <a href="testimonial.html" class="more-link">[...]</a>
+				                                <div class="name-testimonial"><a class="name-testimonial" href="testimonial.html">Joy Mergot </a></div>
+				                            </blockquote>
+				                        </li>
+				                    </ul>
+				                </div>
+				                <script type="text/javascript">
+				                    jQuery(document).ready(function($){
+				                        $('.testimonial-widget ul').cycle({
+				                            fx:'scrollLeft',
+				                            timeout:8000,
+				                            speed:300, 
+				                            pager:'.p-testimonial',
+				                            fit: 1,
+				                            width: '100%'
+				                        });
+				                    });
+				                </script>
+				            </div>
+				        </div>
+				        <!-- END SIDEBAR -->
+				        <!-- START EXTRA CONTENT -->
+				        <div class="extra-content group">
+				            <div class="section portfolio">
+				                <h3 class="title">Gallery images</h3>
+				                <div class="portfolio-projects">
+				                    <div class="related_project">
+				                        <a title="" href="static/images/home-ix/0022.jpg" class="related_img related_proj" rel="lightbox">
+				                        <img src="static/images/home-ix/0022-175x175.jpg" alt="0022" title="0022" />					</a>
+				                    </div>
+				                    <div class="related_project">
+				                        <a title="" href="static/images/home-ix/00313.jpg" class="related_img related_proj" rel="lightbox">
+				                        <img src="static/images/home-ix/00313-175x175.jpg" alt="00313" title="00313" />					</a>
+				                    </div>
+				                    <div class="related_project">
+				                        <a title="" href="static/images/home-ix/00111.jpg" class="related_img related_proj" rel="lightbox">
+				                        <img src="static/images/home-ix/00111-175x175.jpg" alt="00111" title="00111" />					</a>
+				                    </div>
+				                    <div class="related_project">
+				                        <a title="" href="static/images/home-ix/0058.jpg" class="related_img related_proj" rel="lightbox">
+				                        <img src="static/images/home-ix/0058-175x175.jpg" alt="0058" title="0058" />					</a>
+				                    </div>
+				                    <div class="related_project">
+				                        <a title="" href="static/images/home-ix/0076.jpg" class="related_img related_proj" rel="lightbox">
+				                        <img src="static/images/home-ix/0076-175x175.jpg" alt="0076" title="0076" />					</a>
+				                    </div>
+				                    <div class="related_project_last related_project">
+				                        <a title="" href="static/images/home-ix/0094.jpg" class="related_img related_proj" rel="lightbox">
+				                        <img src="static/images/home-ix/0094-175x175.jpg" alt="0094" title="0094" />					</a>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="clear"></div>
+				        </div>
+				        <!-- END EXTRA CONTENT -->
+				    </div>
+				</div>
+				<!-- END PRIMARY -->
+{% endblock %}                				
+				

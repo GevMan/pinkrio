@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+{% block primary %}
+                <!-- START PAGE META -->
+				<div id="page-meta">
+				    <div class="inner group">
+				        <h3>Show and share your videos</h3>
+				    </div>
+				</div>
+				<!-- END PAGE META -->
+				<!-- START PRIMARY -->
+				<div id="primary" class="sidebar-no">
+				    <div class="inner group">
+				        <!-- START CONTENT -->
+				        <div id="content-page" class="content group">
+				            <div class="hentry group">
+				                <script>
+				                    jQuery(document).ready(function($){
+				                    	$('.sidebar').remove();
+				                    	
+				                    	if( !$('#primary').hasClass('sidebar-no') ) {
+				                    		$('#primary').removeClass().addClass('sidebar-no');
+				                    	}
+				                    	
+				                    });
+				                </script>
+				                <ul id="portfolio" class="three-columns">
+				                    <li class="first slide-1 first one-third">
+				                        <a class="thumb video" href="http://www.youtube.com/v/yNOD2Dnyt2k?width=640&amp;height=480&amp;iframe=true" rel="lightbox" title="Right to live free"><img src="static/images/videos/1-365x192.jpg" alt="1" title="1" /></a>
+				                        <h4><a href="video.html">Right to live free</a></h4>
+				                    </li>
+				                    <li class="slide-2  one-third">
+				                        <a class="thumb video" href="http://www.youtube.com/v/LBOfgbAQ8R8&amp;feature=player_detailpage?width=640&amp;height=480&amp;iframe=true" rel="lightbox" title="Don't descriminate"><img src="static/images/videos/2-365x192.jpg" alt="2" title="2" /></a>
+				                        <h4><a href="video.html">Don't descriminate</a></h4>
+				                    </li>
+				                    <li class="slide-3 last group one-third">
+				                        <a class="thumb video" href="http://www.youtube.com/v/jsmvBI1Pwmc?width=640&amp;height=480&amp;iframe=true" rel="lightbox" title="Freedom of expression"><img src="static/images/videos/3-365x192.jpg" alt="3" title="3" /></a>
+				                        <h4><a href="video.html">Freedom of expression</a></h4>
+				                    </li>
+				                    <li class="slide-4 first one-third">
+				                        <a class="thumb video" href="http://www.youtube.com/v/m2kIYgrGi5o&amp;feature=player_detailpage?width=640&amp;height=480&amp;iframe=true" rel="lightbox" title="Born free and equal"><img src="static/images/videos/42-365x192.jpg" alt="42" title="42" /></a>
+				                        <h4><a href="video.html">Born free and equal</a></h4>
+				                    </li>
+				                    <li class="slide-5  one-third">
+				                        <a class="thumb video" href="http://www.youtube.com/v/tYthVsrN4aY?width=640&amp;height=480&amp;iframe=true" rel="lightbox" title="No slavery"><img src="static/images/videos/53-365x192.jpg" alt="53" title="53" /></a>
+				                        <h4><a href="video.html">No slavery</a></h4>
+				                    </li>
+				                    <li class="slide-6 last group one-third">
+				                        <a class="thumb video" href="http://www.youtube.com/v/nSOkmW6wZt8?width=640&amp;height=480&amp;iframe=true" rel="lightbox" title="No torture"><img src="static/images/videos/6-365x192.jpg" alt="6" title="6" /></a>
+				                        <h4><a href="video.html">No torture</a></h4>
+				                    </li>
+				                </ul>
+				            </div>
+				            <!-- START COMMENTS -->
+				            <div id="comments">
+				            </div>
+				            <!-- END COMMENTS -->
+				        </div>
+				        <!-- END CONTENT -->
+				        <!-- START EXTRA CONTENT -->
+				        <!-- END EXTRA CONTENT -->
+				    </div>
+				</div>
+				<!-- END PRIMARY -->
+{% endblock %}				
+				
+	
