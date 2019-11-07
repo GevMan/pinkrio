@@ -7,10 +7,11 @@ from flask_script import Manager
 from flask_admin import Admin
 from flask_mail import Mail
 import gunicorn
+import mysql
 #import WSGIserver
 app = Flask(__name__)
 app.config.from_object(Configuration)
-db = SQLAlchemy(app)
+db = mysql(app)
 
 
 migrate = Migrate(app, db)
