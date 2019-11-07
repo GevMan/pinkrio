@@ -1,6 +1,7 @@
 from app import app
 import view
 from app import db
+from flask import Flask
 app = Flask(__name__)
 if __name__ == '__main__':
   
