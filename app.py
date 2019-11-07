@@ -7,19 +7,15 @@ from flask_script import Manager
 from flask_admin import Admin
 from flask_mail import Mail
 import gunicorn
-import mysql
 #import WSGIserver
 app = Flask(__name__)
 app.config.from_object(Configuration)
-db = mysql(app)
 
+db = SQLAlchemy(app)
 
 migrate = Migrate(app, db)
 manager=Manager(app)
 manager.add_command('db',MigrateCommand)
-
-
-
 
 app.config['DEBUG']=True
 app.config['TESTING']=False
