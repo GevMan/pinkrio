@@ -15,6 +15,7 @@ from validate_email import validate_email
 from flask_mail import Mail,Message
 from wtforms import Form, TextField, TextAreaField, SubmitField, validators, ValidationError
 
+app = Flask(__name__)
 class MyModelView(ModelView):
     def is_accessible(self):       
         return  current_user.is_authenticated
