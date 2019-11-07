@@ -4,3 +4,8 @@ class Configuration(object):
     SQLALCHEMY_ECHO = True
    # CLEARDB_DATABASE_URL='mysql+mysqlconnector://root:''@localhost/corporate'
     CLEARDB_DATABASE_URL = 'mysql://b49680054be872:18a9dcb2@us-cdbr-iron-east-05.cleardb.net/heroku_a28949ef640e9b2?reconnect=true'
+
+    MYSQL_HOST = 'us-cdbr-iron-east-05.cleardb.net'
+    MYSQL_USER = 'b49680054be872'
+    MYSQL_PASSWORD = '18a9dcb2'
+    MYSQL_DB = 'heroku_a28949ef640e9b2'

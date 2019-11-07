@@ -7,22 +7,18 @@ from flask_script import Manager
 from flask_admin import Admin
 from flask_mail import Mail
 import gunicorn
-from flaskext.mysql import MySQL
 #import WSGIserver
 app = Flask(__name__)
 app.config.from_object(Configuration)
 
-app.config['MYSQL_HOST'] = 'us-cdbr-iron-east-05.cleardb.net'
-app.config['MYSQL_USER'] = 'b49680054be872'
-app.config['MYSQL_PASSWORD'] = '18a9dcb2'
-app.config['MYSQL_DB'] = 'heroku_a28949ef640e9b2'
-db = MySQL(app)
+
 
 migrate = Migrate(app, db)
 manager=Manager(app)
 manager.add_command('db',MigrateCommand)
 
 
+db = SQLAlchemy(app)
 
 app.config['DEBUG']=True
 app.config['TESTING']=False
