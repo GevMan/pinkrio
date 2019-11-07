@@ -10,7 +10,7 @@ import gunicorn
 #import WSGIserver
 app = Flask(__name__)
 app.config.from_object(Configuration)
-
+db = SQLAlchemy(app)
 
 
 migrate = Migrate(app, db)
@@ -18,7 +18,7 @@ manager=Manager(app)
 manager.add_command('db',MigrateCommand)
 
 
-db = SQLAlchemy(app)
+
 
 app.config['DEBUG']=True
 app.config['TESTING']=False
