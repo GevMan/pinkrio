@@ -15,7 +15,7 @@ from validate_email import validate_email
 from flask_mail import Mail,Message
 from wtforms import Form, TextField, TextAreaField, SubmitField, validators, ValidationError
 
-app = Flask(__name__)
+#app = Flask(__name__)
 class MyModelView(ModelView):
     def is_accessible(self):       
         return  current_user.is_authenticated
@@ -77,7 +77,8 @@ def login():
 def logout():
     logout_user()
     return(redirect(url_for("login_admin")))
-@app.route("/index")
+
+@app.route("/")
 def index():
     project=portfolios.query.order_by(portfolios.id.desc()).all()
     article=articles.query.order_by(articles.id.desc()).all()
