@@ -87,14 +87,6 @@ def index():
 
 
 
-
-
-
-
-@app.route("/corporate-testimonials")
-def corporate_testimonials():
-    return(render_template('corporate-testimonials.html'))
-
 @app.route('/test/')
 def test():
     msg = Message('Hello',sender = 'admin@gmail.com', recipients=['gevman97@gmail.com'])
@@ -102,10 +94,7 @@ def test():
     mail.send(msg)
     return "sent"
 
-#@app.route("/contact")
-#def contact():
-    
-#    return(render_template('contact.html'))
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
