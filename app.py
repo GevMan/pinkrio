@@ -7,7 +7,6 @@ from flask_script import Manager
 from flask_admin import Admin
 from flask_mail import Mail
 import gunicorn
-#import WSGIserver
 app = Flask(__name__)
 app.config.from_object(Configuration)
 
@@ -31,8 +30,3 @@ app.config['MAIL_MAX_EMAILS']=None
 app.config['MAIL_SUPPRESS_SEND']=False
 app.config['MAIL_ASCII_ATTACHMENTS']=False
 mail=Mail(app)
-
-#sys.path.insert(0, "/home/flasktest/www/flasktest.atservers.net")
-#os.chdir("/home/flasktest/www/flasktest.atservers.net")
-#if __name__ == '__main__':
-#    WSGIServer(app).run()

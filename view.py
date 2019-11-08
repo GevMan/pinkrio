@@ -15,20 +15,14 @@ from validate_email import validate_email
 from flask_mail import Mail,Message
 from wtforms import Form, TextField, TextAreaField, SubmitField, validators, ValidationError
 
-#app = Flask(__name__)
 class MyModelView(ModelView):
     def is_accessible(self):       
-        return  current_user.is_authenticated
-        #return False  
+        return  current_user.is_authenticated  
     
 class MyAdminIndexView(AdminIndexView):
     def is_accessible(self):
             return  current_user.is_authenticated
-            #return False
 
-#def inaccessible_callback(self, name, **kwargs):
-        # redirect to login page if user doesn't have access
-       # return redirect(url_for('login', next=request.url))
 
 admin=Admin(app,index_view=MyAdminIndexView(),template_mode='bootstrap3')
 admin.add_view(ModelView(articles, db.session))
@@ -59,9 +53,7 @@ admin.add_link(LogoutMenuLink(name='Logout', category='', url="/logout"))
 
 
 login_manager = LoginManager(app)
-#login_manager.init_app(app)
-#login_manager.login_view = ''
- 
+
 app.secret_key='zzz'
 
 @login_manager.user_loader
