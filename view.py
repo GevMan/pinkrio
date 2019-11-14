@@ -79,14 +79,6 @@ def index():
 
 
 
-@app.route('/test/')
-def test():
-    msg = Message('Hello',sender = 'admin@gmail.com', recipients=['gevman97@gmail.com'])
-    msg.body = '<b>hi, this is the mail sent by using the flask web application</b>'
-    mail.send(msg)
-    return "sent"
-
-
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
